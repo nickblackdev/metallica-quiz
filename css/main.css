@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap");
+:root {
+  --color-primary: #493c95;
+  --color-primary-light: #493c95;
+  --color-primary-dark: #000000; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #fff;
+  background-image: linear-gradient(to right bottom, var(--color-primary-dark), var(--color-primary-light));
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh; }
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  text-align: center; }
+
+.btn {
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #000; }
+  @media only screen and (min-width: 56.25em) {
+    .btn:hover {
+      background-color: transparent;
+      color: #fff; } }
+
+img {
+  width: 100%;
+  height: auto; }
+
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 15px; }
+  @media only screen and (max-width: 31.25em) {
+    .container {
+      margin: 0;
+      max-width: 100%;
+      width: 100%; } }
+
+#scoreBar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-top: 10px; }
+  #scoreBar h3 {
+    font-size: 1rem;
+    line-height: 1.5;
+    border-bottom: 1px solid #fff; }
+  #scoreBar h4 {
+    font-size: 2rem; }
+
+.title-img {
+  max-width: 70rem;
+  display: block;
+  margin: 0 auto; }
+
+#start, #reset {
+  display: flex;
+  justify-content: center;
+  margin: 5rem 0; }
+
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none; }
+
+a {
+  text-decoration: none; }
+
+.btn {
+  font-size: 1.8rem;
+  padding: 10px 20px; }
+  .btn.start {
+    text-transform: uppercase; }
+
+#questions {
+  margin: 3.5rem 0; }
+
+.question {
+  font-size: 2.6rem;
+  line-height: 1.5;
+  text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    .question {
+      font-size: 2.3rem; } }
+  .question:before {
+    content: '"'; }
+  .question:after {
+    content: '"'; }
+
+#options {
+  justify-content: center;
+  flex-flow: row wrap; }
+  #options .btn {
+    width: 30%;
+    margin: 10px; }
+    @media only screen and (max-width: 661px) {
+      #options .btn {
+        width: 46%; } }
+    @media only screen and (max-width: 37.5em) {
+      #options .btn {
+        width: 43.6%;
+        font-size: 1.6rem; } }
+
+#finalScore {
+  font-size: 5rem;
+  text-align: center; }
