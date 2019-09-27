@@ -28,12 +28,57 @@ var questionsController = (function() {
   
     };
 
-    var q1 = new Question('Life it seems will fade away. Drifting further every day.', ['Fade To Black', 'One', 'Battery', 'Master of Puppets', 'Blackened', 'Creeping Death'], 'Fade To Black');
-    var q2 = new Question('I took all of his money. And it was a pretty penny. I took all of his money.', ['Whisky in the Jar', 'Enter Sandman', 'Master of Puppets', 'One', 'Of Wolf and Man', 'Orion'], 'Whisky in the Jar');
-    var q3 = new Question('Die by my hand. I creep across the land. Killing the firstborn man.', ['Ride the Lightning', 'Damage Inc.', 'Escape', 'Fixxer', 'Mama Said', 'Creeping Death'], 'Creeping Death');
-
-    var questions = [q1, q2, q3];
-
+    var questions = [{
+        question: "Life it seems will fade away. Drifting further every day.",
+        options: ["Fade To Black", "One", "Battery", "Master of Puppets", "Blackened", "Creeping Death"],
+        correct: "Fade To Black"
+    },
+    {
+        question: "I took all of his money. And it was a pretty penny. I took all of his money.",
+        options: ["Whisky in the Jar", "Enter Sandman", "Master of Puppets", "One", "Of Wolf and Man", "Orion"],
+        correct: "Whisky in the Jar"
+    },
+    {
+        question: "Die by my hand. I creep across the land. Killing the firstborn man.",
+        options: ["Ride the Lightning", "Damage Inc.", "Escape", "Fixxer", "Mama Said", "Creeping Death"],
+        correct: "Creeping Death"
+    },
+    {
+        question: "What I've felt, what I've known, turn the pages, turn the stone, behind the door, should I open it for you?",
+        options: ["The Unforgiven", "Hit the Lights", "Until it Sleeps", "Fuel", "Call of Ktulu", "The Unforgiven II"],
+        correct: "The Unforgiven II"
+    },
+    {
+        question: "Running, on our way. Hiding, you will pay. Dying, one thousand deaths",
+        options: ["Master of Puppets", "Hit the Lights", "Until it Sleeps", "The God That Failed", "Seek and Destroy", "The Four Horsemen"],
+        correct: "Seek and Destroy"
+    },
+    {
+        question: "Fortune, fame, mirror vain, gone insane",
+        options: ["The Day That Never Comes", "Hit the Lights", "2 X 4", "The Memory Remains", "Enter Sandman", "The Unforgiven"],
+        correct: "The Memory Remains"
+    },
+    {
+        question: "Flash before my eyes, now it's time to die. Burning in my brain, I can feel the flame",
+        options: ["Creeping Death", "Blackened", "The Four Horsemen", "Harvester of Sorrow", "Holier Than Thou", "Ride the Lightning"],
+        correct: "Ride the Lightning"
+    },
+    {
+        question: "Say your prayers, little one. Don't forget, my son, to include everyone",
+        options: ["Enter Sandman", "The End of the Line", "Wherever I May Roam", "Harvester of Sorrow", "King Nothing", "Halo On Fire"],
+        correct: "Enter Sandman"
+    },
+    {
+        question: "Come unto me and you will feel perfection Come unto me and dedicate",
+        options: ["Moth Into Flame", "Spit Out the Bone", "One", "Harvester of Sorrow", "That Was Just Your Life", "Sad but True"],
+        correct: "Spit Out the Bone"
+    },
+    {
+        question: "My eyes seek reality My fingers feel for faith",
+        options: ["Low Man's Lyric", "Seek and Destroy", "Battery", "The Thing That Should Not Be", "Atlas, Rise!", "The Unforgiven"],
+        correct: "Low Man's Lyric"
+    }];
+    
     return {
         loadQuestion: Question.prototype.loadQuestions,
         questions: questions,
