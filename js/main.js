@@ -1,5 +1,6 @@
 // Question Controller
 var questionsController = (function() {
+
     // Create Question Data
     var Question = function(question, options, correct) {
         this.question = question;
@@ -34,11 +35,11 @@ var questionsController = (function() {
     var questions = [q1, q2, q3];
 
     return {
+        loadQuestion: Question.prototype.loadQuestions,
+        questions: questions,
         testing: function() {
             //console.log(questions);
         },
-        loadQuestion: Question.prototype.loadQuestions,
-        questions: questions
     };
     
 
@@ -61,7 +62,6 @@ var UIController = (function() {
         finalScore: 'finalScore',
         resetBtn: 'reset'
     };
-
 
     return {
         getDOMstrings: function() {
@@ -87,6 +87,12 @@ var UIController = (function() {
             document.getElementById(DOMstrings.scoreBar).style.opacity = 0;
             document.getElementById(DOMstrings.results).style.display = 'block';
             document.getElementById(DOMstrings.finalScore).textContent = score;
+            
+            if (score < 2) {
+                document.querySelector('.results-header').textContent = 'What a disaster!';
+            } else {
+                document.querySelector('.results-header').textContent = 'You\'re metal!';
+            }
         }
     };
 
@@ -94,6 +100,7 @@ var UIController = (function() {
 
 //Controller
 var controller = (function(questionsCtrl, UICtrl) {
+
     // Get DOM variables
     var DOM = UICtrl.getDOMstrings();
 
@@ -114,7 +121,6 @@ var controller = (function(questionsCtrl, UICtrl) {
         document.getElementById(DOM.options).addEventListener('click', checkAnswer);
         
     };
-
 
     var checkAnswer = function(event) {
 
