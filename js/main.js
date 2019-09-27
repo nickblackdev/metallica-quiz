@@ -133,7 +133,7 @@ var UIController = (function() {
             document.getElementById(DOMstrings.results).style.display = 'block';
             document.getElementById(DOMstrings.finalScore).textContent = score;
             
-            if (score < 2) {
+            if (score < 5) {
                 document.querySelector('.results-header').textContent = 'What a disaster!';
             } else {
                 document.querySelector('.results-header').textContent = 'You\'re metal!';
@@ -211,24 +211,33 @@ var controller = (function(questionsCtrl, UICtrl) {
         var correctAnswer = questionsCtrl.questions[questionNumber].correct;
 
         if (event.target.textContent === correctAnswer) {
+            event.target.classList.add('correct');
             score++;
             UICtrl.updateScore(score);
         } else {
-           
+            event.target.classList.add('wrong');
         }
 
         questionNumber++;
-        changeQuestion();
+        
+        setTimeout(changeQuestion, 700);
         
     }
 
     var changeQuestion = function() {
+        var correctClass = document.getElementsByClassName("correct");
+        while (correctClass.length) {
+            correctClass[0].classList.remove("correct");
+        }
+        var wrongClass = document.getElementsByClassName("wrong");
+        while (wrongClass.length) {
+            wrongClass[0].classList.remove("wrong");
+        }
 
         UICtrl.updateCurrentQuestion(questionNumber, totalQuestions);
         
         if (questionNumber < questionsCtrl.questions.length) {
             questionsCtrl.loadQuestion(questionNumber);
-            console.log(questionsCtrl.questions.length);
         } else {
             // Show results
             UICtrl.showResults(score);

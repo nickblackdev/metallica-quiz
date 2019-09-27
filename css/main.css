@@ -92,7 +92,11 @@ a {
     text-transform: uppercase; }
 
 #questions {
-  margin: 3.5rem 0; }
+  margin: 3.5rem 0;
+  height: 97px; }
+  @media only screen and (max-width: 37.5em) {
+    #questions {
+      height: 115px; } }
 
 .question {
   font-size: 2.6rem;
@@ -112,6 +116,8 @@ a {
   #options .btn {
     width: 30%;
     margin: 10px; }
+    #options .btn:focus {
+      outline: 0; }
     @media only screen and (max-width: 661px) {
       #options .btn {
         width: 46%; } }
@@ -119,6 +125,18 @@ a {
       #options .btn {
         width: 43.6%;
         font-size: 1.6rem; } }
+    @media only screen and (max-width: 340px) {
+      #options .btn {
+        width: 42%;
+        font-size: 1.6rem; } }
+    #options .btn.correct {
+      border-color: #05A225;
+      background-color: #05A225;
+      color: #fff; }
+    #options .btn.wrong {
+      border-color: #E81C26;
+      background-color: #E81C26;
+      color: #fff; }
 
 #finalScore {
   font-size: 5rem;
