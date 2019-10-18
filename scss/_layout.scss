@@ -134,10 +134,10 @@ a {
 
   .fade-in-scale {
     animation: fadeInScale ease-out 1s;
-    // -webkit-animation: fadeInScale ease-out 2.5s;
-    // -moz-animation: fadeInScale ease-out 2.5s;
-    // -o-animation: fadeInScale ease-out 2.5s;
-    // -ms-animation: fadeInScale ease-out 2.5s;
+    -webkit-animation: fadeInScale ease-out 1s;
+    -moz-animation: fadeInScale ease-out 1s;
+    -o-animation: fadeInScale ease-out 1s;
+    -ms-animation: fadeInScale ease-out 1s;
   }
   
   
