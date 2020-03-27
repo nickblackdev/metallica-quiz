@@ -1,64 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="css/main.css">
 
-        <title>Metallica Quiz</title>
-    </head>
-    <body>
-        <section id="scoreBar" class="container">
-            <div class="score-bar-card">
-                <h3>Question #</h3>
-                <h4 id="currentQuestion"></h4>
-            </div>
-            <div class="score-bar-card">
-                <h3>Score</h3>
-                <h4 id="score"></h4>
-            </div>
-            <div class="score-bar-card">
-                <h3>Timer</h3>
-                <h4  id="timer"></h4>
-            </div>
-        </section>
+		<title>Metallica Quiz</title>
+	</head>
+	<body>
+		<section id="scoreBar" class="container">
+			<div class="score-bar-card">
+				<h3>Question #</h3>
+				<h4 id="currentQuestion"></h4>
+			</div>
+			<div class="score-bar-card">
+				<h3>Score</h3>
+				<h4 id="score"></h4>
+			</div>
+			<div class="score-bar-card">
+				<h3>Timer</h3>
+				<h4  id="timer"></h4>
+			</div>
+		</section>
 
-        <header class="container">
-            <img src="img/name-the-song-white.png" alt="Name The Song" class="title-img fade-in-scale"/>
-        </header>
+		<header class="container">
+			<img src="img/name-the-song-white.png" alt="Name The Song" class="title-img fade-in-scale"/>
+		</header>
 
-        <main role="main" class="container">
-            <section id="start">
-                <button type="button" class="btn start fade-in-scale">Take Quiz</button>
-            </section>
+		<main role="main" class="container">
+			<section id="start">
+				<button type="button" class="btn start fade-in-scale">Take Quiz</button>
+			</section>
 
-            <div id="quiz">
-                <section id="questions">
-                    <p class="question"></p>
-                </section>
+			<div id="quiz">
+				<section id="questions">
+					<p class="question"></p>
+				</section>
 
-                <section id="options">
-                    <button role="button" class="btn option one"></button>
-                    <button role="button" class="btn option two"></button>
-                    <button role="button" class="btn option three"></button>
-                    <button role="button" class="btn option four"></button>
-                    <button role="button" class="btn option five"></button>
-                    <button role="button" class="btn option six"></button>
-                </section>
-            </div>
+				<section id="options">
+					<button role="button" class="btn option one"></button>
+					<button role="button" class="btn option two"></button>
+					<button role="button" class="btn option three"></button>
+					<button role="button" class="btn option four"></button>
+					<button role="button" class="btn option five"></button>
+					<button role="button" class="btn option six"></button>
+				</section>
+			</div>
 
-            <section id="results">
-                <h2 class="results-header"></h2>
-                <div id="finalScore"></div>
+			<section id="results">
+				<h2 class="results-header"></h2>
+				<div id="finalScore"></div>
 
-                <section id="reset">
-                    <button type="button" class="btn reset" onclick="reset()">Play Again</button>
-                </section>
-            </section>
-        </main>
+				<section id="reset">
+					<button type="button" class="btn reset" onclick="reset()">Play Again</button>
+				</section>
+			</section>
+		</main>
 
-        <script src="js/main.js"></script>
-    </body>
+		<script src="js/main.js"></script>
+	</body>
 </html>

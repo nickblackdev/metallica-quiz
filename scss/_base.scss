@@ -46,24 +46,24 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6 {
-    text-transform: uppercase;
-    text-align: center;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .btn {
-    -webkit-appearance: none;
-    background-color: #fff;
-    border: 2px solid #fff;
-    color: #000;
-    &:hover {
-        @media only screen and (min-width: $medium) {
-            background-color: transparent;
-            color: #fff;
-        }
+  -webkit-appearance: none;
+  background-color: #fff;
+  border: 2px solid #fff;
+  color: #000;
+  &:hover {
+    @media only screen and (min-width: $medium) {
+      background-color: transparent;
+      color: #fff;
     }
+  }
 }
 
 img {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
