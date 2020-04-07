@@ -77,6 +77,7 @@ a {
 }
 
 #options {
+  display: flex;
   justify-content: center;
   flex-flow: row wrap;
   .btn {
@@ -110,8 +111,20 @@ a {
 }
 
 #finalScore {
-  font-size: 5rem;
+  font-size: 3.5rem;
   text-align: center;
+  @media only screen and (max-width: $small) {
+    font-size: 2rem;
+  }
+}
+
+.results-header {
+  font-size: 3.5rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  @media only screen and (max-width: $small) {
+    font-size: 2.5rem;
+  }
 }
 
 .fade-in {

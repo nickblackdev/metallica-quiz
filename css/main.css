@@ -111,6 +111,7 @@ a {
     content: '"'; }
 
 #options {
+  display: flex;
   justify-content: center;
   flex-flow: row wrap; }
   #options .btn {
@@ -139,8 +140,19 @@ a {
       color: #fff; }
 
 #finalScore {
-  font-size: 5rem;
+  font-size: 3.5rem;
   text-align: center; }
+  @media only screen and (max-width: 37.5em) {
+    #finalScore {
+      font-size: 2rem; } }
+
+.results-header {
+  font-size: 3.5rem;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+  @media only screen and (max-width: 37.5em) {
+    .results-header {
+      font-size: 2.5rem; } }
 
 .fade-in {
   animation: fadeIn ease 2.5s;
@@ -156,7 +168,11 @@ a {
     opacity: 1; } }
 
 .fade-in-scale {
-  animation: fadeInScale ease-out 1s; }
+  animation: fadeInScale ease-out 1s;
+  -webkit-animation: fadeInScale ease-out 1s;
+  -moz-animation: fadeInScale ease-out 1s;
+  -o-animation: fadeInScale ease-out 1s;
+  -ms-animation: fadeInScale ease-out 1s; }
 
 @keyframes fadeInScale {
   0% {

@@ -130,12 +130,13 @@ var UIController = (function() {
       document.getElementById(DOMstrings.quiz).style.display = 'none';
       document.getElementById(DOMstrings.scoreBar).style.opacity = 0;
       document.getElementById(DOMstrings.results).style.display = 'block';
-      document.getElementById(DOMstrings.finalScore).textContent = score;
       
       if (score < 5) {
         document.querySelector('.results-header').textContent = 'What a disaster!';
+        document.getElementById(DOMstrings.finalScore).textContent = 'You ONLY got ' + score + ' out of 10 right.';
       } else {
         document.querySelector('.results-header').textContent = 'You\'re metal!';
+        document.getElementById(DOMstrings.finalScore).textContent = 'You got ' + score + ' out of 10 right.';
       }
     },
     startTimer: function() {
